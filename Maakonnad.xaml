@@ -6,12 +6,21 @@
         <StackLayout>
             <Entry x:Name="nimetusEntry" Text="{Binding Path=Nimetus}"/>
             <Entry x:Name="pealinnEntry" Text="{Binding Path=Pealinn}"/>
+            <Entry x:Name="pinadalaEntry" Text="{Binding Path=Pindala}"/>
+            <Entry x:Name="naabermaakondEntry" Text="{Binding Path=Naabermaakond}"/>
             <StackLayout Orientation="Horizontal">
                 <Stepper x:Name="arv_stepper" Minimum="0" Maximum="100000" Increment="100" Value="{Binding Path=Inimeste_arv}"/>
                 <Label x:Name="arvlbl" FontSize="Large" Text="{Binding Source={x:Reference Name =arv_stepper}, Path=Value}"/>
-
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Stepper x:Name="arv_stepper1" Minimum="0" Maximum="10000" Increment="10" Value="{Binding Path=Pindala}"/>
+                <Label x:Name="arvlbl1" FontSize="Large" Text="{Binding Source={x:Reference Name =arv_stepper1}, Path=Value}"/>
             </StackLayout>
             <Button Text="Salvesta" Clicked="Button_Clicked"/>
+            <Button Text="Salvesta failisse" Clicked="Salvesta_failisse"/>
+            <Button Text="Loe failist" Clicked="Loe_failist"/>
+            <Button Text="Kustuta faili" Clicked="Kustuta_faili"/>
+            <Label x:Name="lbl"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

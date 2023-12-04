@@ -19,9 +19,9 @@ namespace Locall
             InitializeComponent();
             Maakonnads = new ObservableCollection<Maakond>();
             {
-                new Maakond { Nimetus = "Harjumaa", Pealinn = "Tallinn", Inimeste_arv = 52000 };
-                new Maakond { Nimetus = "Tartumaa", Pealinn = "Tartu", Inimeste_arv = 30000 };
-                new Maakond { Nimetus = "Ida-Virumaa", Pealinn = "Kohtla-Järve", Inimeste_arv = 10000 };
+                new Maakond { Nimetus = "Harjumaa", Pealinn = "Tallinn", Inimeste_arv = 52000, Pindala = 159, Asukoht = "Eestimaa", Naabermaakond = "Läänemaa" };
+                new Maakond { Nimetus = "Tartumaa", Pealinn = "Tartu", Inimeste_arv = 30000, Pindala = 39, Asukoht = "Eestimaa", Naabermaakond = "Valgamaa" };
+                new Maakond { Nimetus = "Ida-Virumaa", Pealinn = "Kohtla-Järve", Inimeste_arv = 10000, Pindala = 69, Asukoht = "Eestimaa", Naabermaakond = "Lääne-Virumaa"  };
             };
             list.BindingContext = Maakonnads;
         }

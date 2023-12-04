@@ -10,13 +10,20 @@ namespace Locall
         string nimetus;
         string pealinn;
         int inimeste_arv;
+        string asukoht;
+        string naabermaakond;
+        int pindala;
         // lisame konstruktori...
         public Maakond() { }
-        public Maakond(string Nimetus, string Pealinn, int Inimeste_arv)
+        public Maakond(string Nimetus, string Pealinn, int Inimeste_arv, int Pindala, string Asukoht, string Naabermaakond)
         {
             nimetus = Nimetus;
             pealinn = Pealinn;
-            inimeste_arv = Inimeste_arv;        }
+            inimeste_arv = Inimeste_arv;
+            pindala = Pindala;
+            asukoht = Asukoht;
+            naabermaakond = Naabermaakond;
+        }
 
         public string Nimetus
         {
@@ -51,6 +58,42 @@ namespace Locall
                 {
                     inimeste_arv = value;
                     OnPropertyChanged("Inimeste_arv");
+                }
+            }
+        }
+        public int Pindala
+        {
+            get { return pindala; }
+            set
+            {
+                if (pindala != value)
+                {
+                    pindala = value;
+                    OnPropertyChanged("Pindala");
+                }
+            }
+        }
+        public string Asukoht
+        {
+            get { return asukoht; }
+            set
+            {
+                if (asukoht != value)
+                {
+                    asukoht = value;
+                    OnPropertyChanged("Asukoht");
+                }
+            }
+        }
+        public string Naabermaakond
+        {
+            get { return naabermaakond; }
+            set
+            {
+                if (naabermaakond != value)
+                {
+                    naabermaakond = value;
+                    OnPropertyChanged("Naabermaakond");
                 }
             }
         }
